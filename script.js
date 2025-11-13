@@ -1,3 +1,10 @@
+if (!window.ethereum) {
+    Object.defineProperty(window, 'ethereum', {
+      value: {},
+      writable: false
+    });
+  }
+  
 const input = document.getElementById("task-input");
 const addBtn = document.getElementById("add-btn");
 const taskList = document.getElementById("task-list");
